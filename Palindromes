@@ -1,0 +1,7 @@
+String = 'I-Am-A-Phan'
+String = String.casefold()
+reversed_String = reversed(String)
+if list(String) == list(reversed_String):
+   print("It a palindrome")
+else:
+   print("It no palindrome")

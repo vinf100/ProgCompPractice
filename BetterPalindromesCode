@@ -1,0 +1,7 @@
+String = input('What statement should I analyse:')
+String = String.casefold()
+reversed_String = reversed(String)
+if list(String) == list(reversed_String):
+   print("Yes", String)
+else:
+   print("No", String)

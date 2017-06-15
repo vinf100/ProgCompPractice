@@ -2,6 +2,6 @@ input = raw_input('What statement should I analyse:')
 input = input.casefold()
 reversed_input = input[::-1]
 if list(input) == list(reversed_input):
-   print 'Yes, "%s"' %(input)
+   print('Yes, "%s"' %(input))
 else:
-   print 'No, "%s"' %(input)
+   print('No, "%s"' %(input))

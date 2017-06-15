@@ -1,4 +1,4 @@
-input = input('What statement should I analyse:')
+input = raw_input('What statement should I analyse:')
 input = input.casefold()
 reversed_input = input[::-1]
 if list(input) == list(reversed_input):

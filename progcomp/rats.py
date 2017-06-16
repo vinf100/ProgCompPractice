@@ -12,18 +12,20 @@ def cycle(start):
     current_cycle = [start]
     while True:
         current_number = rats(current_cycle[-1])
-
-        if current_number in current_cycle:
-            rats_cycle.append({
-                "cycle": current_cycle
-            })
-
+        if current_number >= 10e12:
+            break
+        elif current_number in current_cycle:
+            recur_cycle = current_cycle[current_cycle.index(current_number):-2]
+            recur_cycle = [str(i) for i in recur_cycle]
+            print("Period {}: occurs {} times, cycle {}".format(len(recur_cycle), len(current_cycle), recur_cycle))
             for item in current_cycle:
-                less_than_10000.remove(item)
+                if item in less_than_10000:
+                    less_than_10000.remove(item)
+
+            print(current_cycle)
             break
         else:
-            current_cycle.insert(current_number, len(current_cycle))
+            current_cycle.append(current_number)
+
 for number in less_than_10000:
     cycle(number)
-
-print(rats_cycle)

@@ -1,0 +1,9 @@
+M = int(input('Motivation?'))
+T = int(input('Starting Target?'))
+S = int(input('How many steps?'))
+T_new = T
+if S >= T:
+    T_new = T + (M/100)**2 * (S - T)
+if S <= T:
+    T_new = T + (1 - M)**2 * (S - T)
+print(T_new)

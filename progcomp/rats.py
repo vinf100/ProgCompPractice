@@ -17,12 +17,10 @@ def cycle(start):
         elif current_number in current_cycle:
             recur_cycle = current_cycle[current_cycle.index(current_number):-2]
             recur_cycle = [str(i) for i in recur_cycle]
-            print("Period {}: occurs {} times, cycle {}".format(len(recur_cycle), len(current_cycle), recur_cycle))
+            print("Period {}: occurs {} times, cycle {}".format(len(recur_cycle), len(current_cycle), " ".join(recur_cycle)))
             for item in current_cycle:
                 if item in less_than_10000:
                     less_than_10000.remove(item)
-
-            print(current_cycle)
             break
         else:
             current_cycle.append(current_number)
